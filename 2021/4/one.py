@@ -18,6 +18,10 @@ def parse_input(input):
       boards.append(tmp_board)
       tmp_board = []
       continue
+    tmp_line = input[index]
+    tmp_ints = []
+    for i in range(1,5):
+      tmp_ints[i] = int(tmp_line[-1+i]+tmp_line[0+i])
     tmp_board.append(input[index])
   boards.append(tmp_board)
   return numbers_drawn, boards
